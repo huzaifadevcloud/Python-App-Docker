@@ -1,101 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <title>DevOps with Docker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
 
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: yellow;
-}
+    header {
+      background: linear-gradient(135deg, #0d6efd, #0dcaf0);
+      padding: 40px 20px;
+      text-align: center;
+      color: #fff;
+      border-bottom: 4px solid #0a58ca;
+    }
 
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
-}
+    header h2 {
+      font-size: 2.2rem;
+    }
 
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 20px;
+    }
 
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
+    nav {
+      flex: 1;
+      min-width: 250px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    nav ul {
+      list-style: none;
+    }
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: yellow;
-}
+    nav ul li {
+      margin: 15px 0;
+    }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
+    nav ul li a {
+      text-decoration: none;
+      color: #0d6efd;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0a58ca;
+    }
+
+    article {
+      flex: 2;
+      min-width: 300px;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    article h1 {
+      margin-bottom: 15px;
+      color: #0d6efd;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <header>
+    <h2>Learning DevOps Containers Using Docker</h2>
+  </header>
 
-<header>
-  <h2>Learning DevOps Containers Using Docker</h2>
-</header>
+  <section>
+    <nav>
+      <ul>
+        <li><a href="https://www.youtube.com/">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+        <li><a href="https://telegram.me/">Telegram</a></li>
+      </ul>
+    </nav>
 
-<section>
-  <nav>
-    <ul>
-      <li><a href="www.youtube.com/">YouTube</a></li>
-      <li><a href="www.linkedin.com/">LinkedIn</a></li>
-      <li><a href="https://telegram.me/">Telegram</a></li>
-    </ul>
-  </nav>
-  
-  <article>
-    <h1>Agenda</h1>
-    <p>Learn DevOps with strong foundational knowledge and practical understanding</p>
-    <p>Please Share the Channel with your friends and colleagues</p>
-  </article>
-</section>
+    <article>
+      <h1>Agenda</h1>
+      <p>Learn DevOps with strong foundational knowledge and practical understanding.</p>
+      <p>Please share the channel with your friends and colleagues. Stay consistent and keep learning!</p>
+    </article>
+  </section>
 
-<footer>
-  <p>@HUZAIFA CLOUD DEV</p>
-</footer>
+  <footer>
+    <p>&copy; HUZAIFA CLOUD DEV</p>
+  </footer>
 
 </body>
 </html>
-
