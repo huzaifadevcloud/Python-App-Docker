@@ -41,11 +41,13 @@ pipeline {
     stage('Run App Container') {
       steps {
         echo 'Running Docker container...'
-        sh "docker run --rm -p 8000:8000 ${FULL_IMAGE}"
-        sleep 5  //wait for app to boot
+        sh '''
+        docker run --rm -p 8000:8000 ${FULL_IMAGE}
+        sleep 5  
         curl -f http://localhost:8000 || echo "Server did not respond"
         docker stop test_container
         docker rm test_container
+        '''
       }
     }
 
