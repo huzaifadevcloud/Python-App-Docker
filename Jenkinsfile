@@ -44,7 +44,7 @@ pipeline {
         sh '''
         docker run -d --name test_container -p 8000:8000 ${FULL_IMAGE}
         sleep 5  
-        curl -f http://localhost:8000 || echo "Server did not respond"
+        curl -f http://localhost:8000/demo || echo "Server did not respond"
         docker stop test_container
         docker rm test_container
         '''
