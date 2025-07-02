@@ -41,7 +41,9 @@ pipeline {
     stage('Run App Container') {
       steps {
         echo 'Running Docker container...'
+        //Run webapp independently period
         sh "docker run --rm -p 8000:8000 ${FULL_IMAGE}"
+        // Run the web app and test it
         /*sh '''
         docker run -d --name test_container -p 8000:8000 ${FULL_IMAGE}
         sleep 5  
