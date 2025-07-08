@@ -1,5 +1,6 @@
 pipeline {
-  agent any
+  agent { label "prod"
+  }
 
   environment {
     IMAGE_NAME = 'huzaifafev/python-docker-image'
